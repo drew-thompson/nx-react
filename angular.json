@@ -21,7 +21,9 @@
               "apps/nx-react/src/favicon.ico",
               "apps/nx-react/src/assets"
             ],
-            "styles": ["apps/nx-react/src/styles.scss"],
+            "styles": [
+              "apps/nx-react/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -67,7 +69,9 @@
               "apps/nx-react/tsconfig.app.json",
               "apps/nx-react/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -101,6 +105,33 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/nx-react-e2e/tsconfig.e2e.json"
+          }
+        }
+      }
+    },
+    "autumn-feature-shell": {
+      "root": "libs/autumn/feature-shell",
+      "sourceRoot": "libs/autumn/feature-shell/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/autumn/feature-shell/tsconfig.lib.json",
+              "libs/autumn/feature-shell/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/autumn/feature-shell/jest.config.js",
+            "tsConfig": "libs/autumn/feature-shell/tsconfig.spec.json"
           }
         }
       }

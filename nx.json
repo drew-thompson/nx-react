@@ -13,6 +13,12 @@
     },
     "nx-react-e2e": {
       "tags": []
+    },
+    "autumn-feature-shell": {
+      "tags": [
+        "platform:react",
+        "type:feature"
+      ]
     }
   }
 }

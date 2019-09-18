@@ -1,36 +1,44 @@
 import React from 'react';
 
 import './app.scss';
+import { Route, Link } from 'react-router-dom';
 
-export const App = () => {
-  return (
-    <div>
-      <header style={{ textAlign: 'center' }}>
-        <h1>Welcome to nx-react!</h1>
-        <img
-          width="450"
-          src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png"
+export class App extends React.Component {
+  readonly state = {
+    name: 'Bob'
+  };
+
+  constructor(props: object) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/types">Types</Link>
+          </li>
+        </ul>
+
+        <hr />
+        {/* <Route
+          path="/types"
+          exact
+          component={() => <SharedUi name={this.state.name} />}
         />
-      </header>
-      <p>
-        This is a React app built with <a href="https://nx.dev">Nx</a>.
-      </p>
-      <p>🔎 **Nx is a set of Angular CLI power-ups for modern development.**</p>
-      <h2>Quick Start & Documentation</h2>
-      <ul>
-        <li>
-          <a href="https://nx.dev/getting-started/what-is-nx">
-            30-minute video showing all Nx features
-          </a>
-        </li>
-        <li>
-          <a href="https://nx.dev/tutorial/01-create-application">
-            Interactive tutorial
-          </a>
-        </li>
-      </ul>
-    </div>
-  );
-};
+        <Route
+          path="/:name"
+          render={props => (
+            <SharedUi {...props} name={this.state.name + 'by'} />
+          )}
+        /> */}
+      </div>
+    );
+  }
+}
 
 export default App;
