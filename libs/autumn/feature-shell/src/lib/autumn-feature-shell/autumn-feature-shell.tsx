@@ -2,6 +2,8 @@ import { getRelativePath } from '@nx-react/common/utils';
 import React from 'react';
 import { Link, Route, RouteComponentProps } from 'react-router-dom';
 import './autumn-feature-shell.scss';
+import { AutumnFeaturePumpkins } from '@nx-react/autumn/feature-pumpkins';
+import { AutumnFeatureBlankets } from '@nx-react/autumn/feature-blankets';
 
 export const AutumnFeatureShell = (props: RouteComponentProps) => {
   const { match } = props;
@@ -12,6 +14,7 @@ export const AutumnFeatureShell = (props: RouteComponentProps) => {
     <div>
       <h1>Select something cozy!</h1>
 
+      {false && <header>hi</header>}
       <ul>
         <li>
           <Link to={pumpkins}>Pumpkins</Link>
@@ -21,8 +24,14 @@ export const AutumnFeatureShell = (props: RouteComponentProps) => {
         </li>
       </ul>
 
-      <Route path={pumpkins} render={() => <div>Pumpkins</div>} />
-      <Route path={blankets} render={() => <div>Blankets</div>} />
+      <Route
+        path={pumpkins}
+        render={() => <AutumnFeaturePumpkins {...props} />}
+      />
+      <Route
+        path={blankets}
+        render={() => <AutumnFeatureBlankets {...props} />}
+      />
     </div>
   );
 };

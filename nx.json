@@ -31,6 +31,9 @@
     },
     "common-utils": {
       "tags": ["platform:frontend", "type:util"]
+    },
+    "common-ui": {
+      "tags": ["platform:frontend", "type:ui"]
     }
   }
 }

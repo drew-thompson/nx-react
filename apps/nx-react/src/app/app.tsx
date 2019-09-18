@@ -3,6 +3,7 @@ import React from 'react';
 import './app.scss';
 import { Route, Link } from 'react-router-dom';
 import { SeasonsFeatureShell } from '@nx-react/seasons/feature-shell';
+import { Header } from '@nx-react/common/ui';
 
 export class App extends React.Component {
   readonly state = {
@@ -12,14 +13,7 @@ export class App extends React.Component {
   render() {
     return (
       <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/seasons">Seasons</Link>
-          </li>
-        </ul>
+        <Header />
 
         <hr />
 
