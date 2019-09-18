@@ -19,7 +19,17 @@
       "@nx-react/shared/ui": ["libs/shared/ui/src/index.ts"],
       "@nx-react/autumn/feature-shell": [
         "libs/autumn/feature-shell/src/index.ts"
-      ]
+      ],
+      "@nx-react/seasons/feature-shell": [
+        "libs/seasons/feature-shell/src/index.ts"
+      ],
+      "@nx-react/autumn/feature-pumpkins": [
+        "libs/autumn/feature-pumpkins/src/index.ts"
+      ],
+      "@nx-react/autumn/feature-blankets": [
+        "libs/autumn/feature-blankets/src/index.ts"
+      ],
+      "@nx-react/common/utils": ["libs/common/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

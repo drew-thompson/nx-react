@@ -21,9 +21,7 @@
               "apps/nx-react/src/favicon.ico",
               "apps/nx-react/src/assets"
             ],
-            "styles": [
-              "apps/nx-react/src/styles.scss"
-            ],
+            "styles": ["apps/nx-react/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -69,9 +67,7 @@
               "apps/nx-react/tsconfig.app.json",
               "apps/nx-react/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -122,9 +118,7 @@
               "libs/autumn/feature-shell/tsconfig.lib.json",
               "libs/autumn/feature-shell/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -132,6 +126,131 @@
           "options": {
             "jestConfig": "libs/autumn/feature-shell/jest.config.js",
             "tsConfig": "libs/autumn/feature-shell/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "shared-ui": {
+      "root": "libs/shared/ui",
+      "sourceRoot": "libs/shared/ui/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/ui/tsconfig.lib.json",
+              "libs/shared/ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/ui/jest.config.js",
+            "tsConfig": "libs/shared/ui/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "seasons-feature-shell": {
+      "root": "libs/seasons/feature-shell",
+      "sourceRoot": "libs/seasons/feature-shell/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/seasons/feature-shell/tsconfig.lib.json",
+              "libs/seasons/feature-shell/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/seasons/feature-shell/jest.config.js",
+            "tsConfig": "libs/seasons/feature-shell/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "autumn-feature-pumpkins": {
+      "root": "libs/autumn/feature-pumpkins",
+      "sourceRoot": "libs/autumn/feature-pumpkins/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/autumn/feature-pumpkins/tsconfig.lib.json",
+              "libs/autumn/feature-pumpkins/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/autumn/feature-pumpkins/jest.config.js",
+            "tsConfig": "libs/autumn/feature-pumpkins/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "autumn-feature-blankets": {
+      "root": "libs/autumn/feature-blankets",
+      "sourceRoot": "libs/autumn/feature-blankets/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/autumn/feature-blankets/tsconfig.lib.json",
+              "libs/autumn/feature-blankets/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/autumn/feature-blankets/jest.config.js",
+            "tsConfig": "libs/autumn/feature-blankets/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "common-utils": {
+      "root": "libs/common/utils",
+      "sourceRoot": "libs/common/utils/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/common/utils/tsconfig.lib.json",
+              "libs/common/utils/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/common/utils/jest.config.js",
+            "tsConfig": "libs/common/utils/tsconfig.spec.json"
           }
         }
       }

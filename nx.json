@@ -15,10 +15,22 @@
       "tags": []
     },
     "autumn-feature-shell": {
-      "tags": [
-        "platform:react",
-        "type:feature"
-      ]
+      "tags": ["platform:react", "type:feature"]
+    },
+    "shared-ui": {
+      "tags": ["platform:frontend", "type:ui"]
+    },
+    "seasons-feature-shell": {
+      "tags": ["platform:react", "type:feature"]
+    },
+    "autumn-feature-pumpkins": {
+      "tags": ["platform:react", "type:ui"]
+    },
+    "autumn-feature-blankets": {
+      "tags": ["platform:react", "type:ui"]
+    },
+    "common-utils": {
+      "tags": ["platform:frontend", "type:util"]
     }
   }
 }
